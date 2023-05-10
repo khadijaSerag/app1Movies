@@ -1,0 +1,30 @@
+.overview1{
+    line-height: 1.68em;
+}
+.overview2{
+    line-height: 1.88em;
+    letter-spacing: 0.1em;
+}
+
+.noxe h3 {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #b3b1b1;
+    opacity: 0.5;
+  
+}
+
+.noxe h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    top: 50px;
+    position: absolute;
+    color: #88fbff;
+}
+
+.noxe .tex {
+    font-weight: 400;
+    font-size: 18px;
+    color: #787878;
+}

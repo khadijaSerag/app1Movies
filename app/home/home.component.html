@@ -1,0 +1,43 @@
+
+
+<div class="w-75 m-auto pt-5">
+    <input class="form-control bg-transparent" [(ngModel)]='term' type="text" placeholder="Search movie or tv name">
+</div>
+
+
+<!-- ....................................... movies ........................... -->
+<div class="row mt-5">
+    <div class="col-md-4 mt-3 trend">
+        <div class="brdr2 mt-3 mb-2"></div>
+        <h4>trending <br>movies<br> to watch now</h4>
+        <p>most watched movies by days </p>
+        <div class="brdr"></div>
+    </div>
+
+    <div class="col-md-2 my-3" *ngFor="let movie of trendingMovies|search:term">
+        <div  class="movie">
+            <img [routerLink]="['/moviedetails', movie.id]" class="image w-100 mb-2" [src]="imgPrefix+movie.poster_path" alt="">
+            <h6 [routerLink]="['/moviedetails', movie.id]" class="image" > {{movie.title}}</h6>
+            <div class="vote position-absolute">{{movie.vote_average}}</div>
+        </div>
+    </div>
+</div>
+
+<!-- ....................................... tv ........................... -->
+<div class="row mt-5">
+    <div class="col-md-4 mt-3 trend">
+        <div class="brdr2 mt-3 mb-2"></div>
+        <h4>trending <br>TV<br> to watch now</h4>
+        <p>most watched TVs by days </p>
+        <div class="brdr"></div>
+    </div>
+
+    <div  class="col-md-2 my-3" *ngFor="let tv of trendingTvs|search:term">
+        <div  class="tv">
+            <img [routerLink]="['/tvdetails', tv.id]" class="image w-100 mb-2" [src]="imgPrefix+tv.poster_path" alt="">
+            <h3 [routerLink]="['/tvdetails', tv.id]" class="h6 image">{{tv.name}}</h3>
+            <div class="vote position-absolute">{{tv.vote_average}}</div>
+        </div>
+    </div>
+</div>
+<!-- [routerLink]="['/moviedetails',movie.id]" router link with paramater -->

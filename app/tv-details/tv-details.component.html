@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row my-5 d-flex justify-content-center">
+        <div class="col-lg-4 col-md-8 ">
+            <img class="w-100" [src]="imgPrefix+tvdetails?.poster_path" alt="">
+        </div>
+        <div class="col-lg-8 col-md-12">
+            <h2 class="pt-2 pb-2 font-weight-bolder text-md-center text-lg-left">{{tvdetails?.name}}</h2>
+            <h4 class="text-primary pl-3  py-3">vote: {{tvdetails?.vote_average}}</h4>
+            <h6 class="text-muted py-2 overview2">{{tvdetails?.overview}}</h6>
+        </div>
+    </div>
+</div>

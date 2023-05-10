@@ -1,0 +1,24 @@
+.vote {
+    background-color: #24baef;
+    padding: 5px;
+    top: -18px;
+    right: 5px;
+}
+
+input[type=text] {
+    color: #24baef;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.image {
+    cursor: pointer;
+}
+
+.tv {
+    transition: 1s all;
+}
+
+.tv:hover {
+    transform: scale(0.95, 0.95);
+}

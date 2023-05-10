@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row my-5 d-flex justify-content-center ">
+        <div class="col-lg-4 col-md-6  ">
+            <img class="w-100" [src]="imgPrefix+persondetails?.profile_path" alt="">
+        </div>
+        <div class="col-lg-8 col-md-12">
+            <h2 class="pt-2 pb-4 text-info font-weight-bolder text-md-center text-lg-left ">{{persondetails?.name}}</h2>
+            <h6 class=" text-muted "><span class="text-white">Birthday : </span> {{persondetails?.birthday}} </h6>
+            <h6 class=" text-muted "><span class="text-white">Place of Birth : </span> {{persondetails?.place_of_birth}}</h6>
+            <h6 class="text-muted"><span class="text-white">Known for Department :</span> {{persondetails?.known_for_department}}</h6>
+            <h6 class="text-white pt-3">Biography : </h6>
+            <p class="text-muted  ">{{persondetails?.biography}}</p>
+            <!-- known for section -->
+            <div class="col-md-12">
+                <h5 class="text-white py-3">Known For : </h5>
+                <div class="row">
+                    
+                    <div class="col-lg-4 col-md-6 mb-4 movie" [routerLink]="['/moviedetails',personDetails[0]?.known_for[0].id]" >
+                        <img class="image w-100 mb-2 " [src]="imgPrefix+personDetails[0]?.known_for[0].poster_path" alt="">
+                        <h6 class="image text-muted"> {{personDetails[0]?.known_for[0].title}}</h6>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 movie" [routerLink]="['/moviedetails',personDetails[0]?.known_for[1].id]">
+                        <img class="image w-100 mb-2" [src]="imgPrefix+personDetails[0]?.known_for[1].poster_path" alt="">
+                        <h6 class="image text-muted"> {{personDetails[0]?.known_for[1].title}}</h6>
+                    </div>
+                    <div class="col-lg-4 col-md-6 movie" [routerLink]="['/moviedetails',personDetails[0]?.known_for[2].id]">
+                        <img class="image w-100 mb-2" [src]="imgPrefix+personDetails[0]?.known_for[2].poster_path" alt="">
+                        <h6 class="image text-muted"> {{personDetails[0]?.known_for[2].title}}</h6>
+                    </div>
+                    <!-- <p class="text-muted py-2 ">{{alsoKnownFor?.title}}</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

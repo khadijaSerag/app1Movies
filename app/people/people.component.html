@@ -1,0 +1,33 @@
+
+
+
+<div class="w-75 m-auto pt-5">
+    <input class="form-control " [(ngModel)]='term' type="text" placeholder="Search pepole name">
+</div>
+
+
+<div class="row d-flex justify-content-center pt-5 text-center ">
+    <div class="col-md-6">
+        <pagination-controls (pageChange)="page = $event" responsive="true" (pageChange)="handlePageChanged($event)"></pagination-controls>
+    </div>
+</div>
+
+
+
+<div class="row mt-4">
+    <div class="col-md-3 my-3"
+        *ngFor="let person of trendingPerson|search:term| paginate: { itemsPerPage: 1, currentPage: page, totalItems:500 }; let i = index">
+        <div class="person">
+            <img [routerLink]="['/persondetails', person.id]" class="image w-100 mb-2" [src]="imgPrefix+person.profile_path" 
+                alt="">
+            <h6 [routerLink]="['/persondetails', person.id]" class="image"> {{person.name}}</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row d-flex justify-content-center py-3 text-center">
+    <div class="col-md-6">
+        <pagination-controls (pageChange)="page = $event" responsive="true" (pageChange)="handlePageChanged($event)"></pagination-controls>
+    </div>
+</div>

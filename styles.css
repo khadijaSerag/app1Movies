@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+body{
+    background-color: #131722;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #fff;
+}
+::selection {
+    background-color: white;
+    color: #23acdf;
+    font-weight: bolder;
+}
+
+.ngx-pagination a:hover, .ngx-pagination button:hover {
+    background: #23acdf !important;
+    /* color: black !important; */
+  }
+  .ngx-pagination a, .ngx-pagination button {
+    padding: 0.1875rem 0.525rem !important;
+  }

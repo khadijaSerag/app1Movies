@@ -1,0 +1,14 @@
+/* .overview1{
+    line-height: 1.68em;
+} */
+.image{
+    cursor: pointer;
+}
+
+.movie{
+  transition: 1s all;
+}
+
+.movie:hover{
+  transform: scale(0.95,0.95);
+}

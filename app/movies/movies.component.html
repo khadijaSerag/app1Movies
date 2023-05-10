@@ -1,0 +1,31 @@
+<div class="w-75 m-auto pt-5">
+    <input class="form-control " [(ngModel)]='term' type="text" placeholder="Search movie name">
+</div>
+
+
+<div class="row d-flex justify-content-center pt-5 text-center ">
+    <div class="col-md-6">
+        <pagination-controls  responsive="true" (pageChange)="handlePageChanged($event)"></pagination-controls>
+    </div>
+</div>
+
+
+
+<div class="row mt-4">
+    <div class="col-md-3 my-3"
+        *ngFor="let movie of trendingMovies|search:term| paginate: { itemsPerPage: 1, currentPage: page, totalItems:500 }; let i = index">
+        <div class="movie">
+            <img [routerLink]="['/moviedetails', movie.id]" class="image w-100 mb-2" [src]="imgPrefix+movie.poster_path"
+                alt="">
+            <h6 [routerLink]="['/moviedetails', movie.id]" class="image"> {{movie.title}}{{movie.name}}</h6>
+            <div class="vote position-absolute">{{movie.vote_average}}</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row d-flex justify-content-center py-3 text-center">
+    <div class="col-md-6">
+        <pagination-controls  responsive="true" (pageChange)="handlePageChanged($event)"></pagination-controls>
+    </div>
+</div>

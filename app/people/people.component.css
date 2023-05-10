@@ -1,0 +1,18 @@
+
+input[type=text] {
+    color: #24baef;
+    padding: 12px 20px;
+    margin: 8px 0;
+  
+  }
+  .image{
+      cursor: pointer;
+  }
+
+  .person{
+    transition: 1s all;
+}
+
+.person:hover{
+    transform: scale(0.95,0.95);
+}
